@@ -1,6 +1,7 @@
 name: Cloud-Deployment-Pipeline
 
 on:
+  workflow_dispatch:
   push:
     branches: ["main"] # Triggers the workflow on every push to the main branch
 
@@ -26,3 +27,4 @@ jobs:
           
       - name: Execute Deployment
         uses: actions/deploy-pages@v4
+
